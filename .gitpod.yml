@@ -1,14 +1,14 @@
-tasks:
-  - before: |
-      wget -qOCodeGraph.zip https://codejudge-artifacts.s3.amazonaws.com/CodeGraph.zip
-      unzip CodeGraph.zip
-  - init: mvn clean install
-    command: java -jar ./target/spring-boot-in-docker.jar
-ports:
-  - port: 8080
-    onOpen: open-preview
-    visibility: public
-vscode:
-  extensions:
-    - vscjava.vscode-java-pack
-    - gabrielbb.vscode-lombok
+# tasks:
+#   - before: |
+#       wget -qOCodeGraph.zip https://codejudge-artifacts.s3.amazonaws.com/CodeGraph.zip
+#       unzip CodeGraph.zip
+#   - init: mvn clean install
+#     command: java -jar ./target/spring-boot-in-docker.jar
+# ports:
+#   - port: 8080
+#     onOpen: open-preview
+#     visibility: public
+# vscode:
+#   extensions:
+#     - vscjava.vscode-java-pack
+#     - gabrielbb.vscode-lombok
