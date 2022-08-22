@@ -2,8 +2,10 @@ tasks:
   - before: |
       wget -qOCodeGraph.zip https://codejudge-artifacts.s3.amazonaws.com/CodeGraph.zip
       unzip CodeGraph.zip
-  - init: echo clean
-    command: echo hi
+      sdk install java 11.0.16-albba
+      sdk default java 11.0.16-albba
+  - init: mvn clean install
+    command: java -jar ./target/spring-boot-in-docker.jar
 ports:
   - port: 8080
     onOpen: open-preview
